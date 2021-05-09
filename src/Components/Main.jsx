@@ -6,7 +6,7 @@ class Main extends Component {
     constructor(){
         super()
         this.state={
-            expense: 0,
+            
         }
     }
 
@@ -23,7 +23,7 @@ class Main extends Component {
 
 
                 <BalanceMain />
-                <ExpenseMain expense={this.state.expense}/>
+                <ExpenseMain />
             </div>
         );
     }
@@ -39,6 +39,9 @@ export default Main;
 // Inputs for "Expense Name" and "Expense Amount" ..............................[]
 // Add button for expenses .....................................................[]
 // The "Total Balance" is affected/reduced by the addition of an expense........[]
+    // NOTE: May have to create own API so balance and expense can interact with each other
+
+// *******************Update the comments when you get a chance**************************
 
 // -----Stretch Goals
 // A visual, such as a pie chart ...............................................[]

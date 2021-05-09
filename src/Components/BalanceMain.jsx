@@ -11,7 +11,7 @@ class BalanceMain extends Component {
 
     changeBalance = (input) =>{
       
-        // Note: I put a goddamn equal sign here for setState which broke my code and I couldn't figure it out for the longest time fuck this fucking syntax I hate it.
+        // Note: I put a goddamn equal sign here for setState which broke my code and I couldn't figure it out for the longest time.
         this.setState({
             balance: input
         })

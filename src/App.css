@@ -32,6 +32,11 @@ header{
     border-bottom: 2px solid green ;
     outline: none;
   }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   .balanceAmount{
     color: green;
     font-size: 4em;
