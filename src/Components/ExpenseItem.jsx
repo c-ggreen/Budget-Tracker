@@ -4,10 +4,9 @@ class ExpenseItem extends Component {
 
     render() {
         return (
-            <div>
-                <h1>
-                {this.props.expenseName}........................${this.props.expenseAmount}
-                </h1>
+            <div className="expenseItem">
+                <h3>{this.props.expenseName}</h3>
+                <h3>${this.props.expenseAmount}</h3>
             </div>
         );
     }

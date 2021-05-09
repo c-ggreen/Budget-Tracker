@@ -6,17 +6,17 @@ class BalanceMain extends Component {
         this.state={
             balance: '',
         }
-        console.log(this.state.balance)
     }
 
-    changeBalance = (input) =>{
-      
+    // The function responsible for altering the state of the balance.
+    changeBalance = (event) =>{
         // Note: I put a goddamn equal sign here for setState which broke my code and I couldn't figure it out for the longest time.
         this.setState({
-            balance: input
+            balance: event.target.value
         })
     }
 
+    // This function is used in the input fields so that when a user clicks on the field (focuses) it resets the value in the field, making it blank so the user doesn't have to manually delete the value.
     onFocus = () =>{
         this.setState({
             balance:''
@@ -28,19 +28,16 @@ class BalanceMain extends Component {
         return (
             <div className="balanceMain">
 
+                {/* The input field for the budget balance */}
                 <input 
-                        className="balanceInput"
-                        type="number" 
-                        placeholder="Enter Balance"
-                        onChange={
-                            (event)=>{
-                                this.changeBalance(event.target.value)
-                            }
-                        }
-                        value={this.state.balance}
+                    className="balanceInput"
+                    type="number" 
+                    placeholder="Enter Balance"
+                    onChange={this.changeBalance}
+                    value={this.state.balance}
 
-                        // makes it so that when user clicks on input field again it resets it to an empty input
-                        onFocus={this.onFocus}
+                    // makes it so that when user clicks on input field again it resets it to an empty input
+                    onFocus={this.onFocus}
                 />
 
 

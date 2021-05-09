@@ -36,9 +36,10 @@ export default Main;
 // A div or component that displays the "Total Balance" ........................[COMPLETED]
 // A user input for "Total Balance" ............................................[COMPLETED]
 // An expense component that shows "Total Expenses" and each expense ...........[COMPLETED]
-// Inputs for "Expense Name" and "Expense Amount" ..............................[]
-// Add button for expenses .....................................................[]
-// The "Total Balance" is affected/reduced by the addition of an expense........[]
+// Inputs for "Expense Name" and "Expense Amount" ..............................[COMPLETED]
+// Add button for expenses .....................................................[COMPLETED]
+// The "Total Balance" is affected/reduced by the addition of an expense .......[]
+// The "Total Expense" is increased by the addition of an expense ..............[]
     // NOTE: May have to create own API so balance and expense can interact with each other
 
 // *******************Update the comments when you get a chance**************************
