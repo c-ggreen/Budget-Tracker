@@ -17,6 +17,12 @@ class BalanceMain extends Component {
         })
     }
 
+    onFocus = () =>{
+        this.setState({
+            balance:''
+        })
+    }
+
 
     render() {
         return (
@@ -32,6 +38,9 @@ class BalanceMain extends Component {
                             }
                         }
                         value={this.state.balance}
+
+                        // makes it so that when user clicks on input field again it resets it to an empty input
+                        onFocus={this.onFocus}
                 />
 
 
