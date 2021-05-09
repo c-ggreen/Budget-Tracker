@@ -6,10 +6,11 @@ class Main extends Component {
     constructor(){
         super()
         this.state={
-            balance: 0,
             expense: 0,
         }
     }
+
+
 
     render() {
         return (
@@ -20,8 +21,8 @@ class Main extends Component {
                     </h1>
                 </header>
 
-                
-                <BalanceMain balance={this.state.balance}/>
+
+                <BalanceMain />
                 <ExpenseMain expense={this.state.expense}/>
             </div>
         );
@@ -33,7 +34,7 @@ export default Main;
 // -----Project Tasks
 // A main component for the app ................................................[COMPLETED]
 // A div or component that displays the "Total Balance" ........................[COMPLETED]
-// A user input for "Total Balance" ............................................[]
+// A user input for "Total Balance" ............................................[COMPLETED]
 // An expense component that shows "Total Expenses" and each expense ...........[COMPLETED]
 // Inputs for "Expense Name" and "Expense Amount" ..............................[]
 // Add button for expenses .....................................................[]

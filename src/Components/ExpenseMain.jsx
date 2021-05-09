@@ -15,7 +15,7 @@ class ExpenseMain extends Component {
     render() {
         return (
             <div className="expenseMain">
-                <h1>Total Expenses: <span className="expenseAmount">{this.props.expense}</span></h1>
+                <h1>Total Expenses: <span className="expenseAmount">${this.props.expense}</span></h1>
 
 
                 

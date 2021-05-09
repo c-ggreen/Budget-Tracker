@@ -27,6 +27,11 @@ header{
   justify-content: center;
 
 }
+  .balanceInput{
+    border: none;
+    border-bottom: 2px solid green ;
+    outline: none;
+  }
   .balanceAmount{
     color: green;
     font-size: 4em;
