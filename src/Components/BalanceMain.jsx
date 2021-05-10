@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ExpenseMain from './ExpenseMain';
 
 class BalanceMain extends Component {
     constructor(){
@@ -27,24 +28,27 @@ class BalanceMain extends Component {
     render() {
         return (
             <div className="balanceMain">
+                <div className="balanceContent">
+                    {/* The input field for the budget balance */}
+                    <input 
+                        className="balanceInput"
+                        type="number" 
+                        placeholder="Enter Balance"
+                        onChange={this.changeBalance}
+                        value={this.state.balance}
 
-                {/* The input field for the budget balance */}
-                <input 
-                    className="balanceInput"
-                    type="number" 
-                    placeholder="Enter Balance"
-                    onChange={this.changeBalance}
-                    value={this.state.balance}
-
-                    // makes it so that when user clicks on input field again it resets it to an empty input
-                    onFocus={this.onFocus}
-                />
+                        // makes it so that when user clicks on input field again it resets it to an empty input
+                        onFocus={this.onFocus}
+                    />
 
 
-                <h1>Budget</h1>
+                    <h1>Budget</h1>
 
-                {/* The Total balance that is being called from the parent component "Main" via props */}
-                <h1 className="balanceAmount">${this.state.balance}</h1>
+                    {/* The Total balance that is being called from the parent component "Main" via props */}
+                    <h1 className="balanceAmount">${this.state.balance}</h1>
+                </div>
+
+                <ExpenseMain/>
             </div>
         );
     }

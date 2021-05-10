@@ -23,7 +23,6 @@ class Main extends Component {
 
 
                 <BalanceMain />
-                <ExpenseMain />
             </div>
         );
     }
