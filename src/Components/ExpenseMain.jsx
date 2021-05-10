@@ -82,7 +82,7 @@ class ExpenseMain extends Component {
 
             {/* The input field for the Expense Name */}
             <input 
-                className="balanceInput"
+                className="expenseInput"
                 type="text" 
                 placeholder="Expense Name"
                 onChange={this.changeName}
@@ -94,7 +94,7 @@ class ExpenseMain extends Component {
 
             {/* The input field for the Expense Amount */}
             <input 
-                className="balanceInput"
+                className="expenseInput"
                 type="number" 
                 placeholder="Expense Amount"
                 onChange={this.changeAmount}
@@ -106,6 +106,8 @@ class ExpenseMain extends Component {
 
             {/* The button that carries out the addExpense function that adds the new expense object to the array, which in turn renders it onto the DOM */}
             <button onClick={()=>{this.addExpense()}}>Add Expense</button>
+
+            <h3>History</h3>
 
             {/* I am rendering an "ExpenseItem" component by adding an item to an empty array. For each "ExpenseItem" I am giving it a prop of name and amount that is tied to the state */}
             {this.state.expenseArray.map((item,i)=>{

@@ -39,7 +39,7 @@ export default Main;
 // Inputs for "Expense Name" and "Expense Amount" ..............................[COMPLETED]
 // Add button for expenses .....................................................[COMPLETED]
 // The "Total Balance" is affected/reduced by the addition of an expense .......[]
-// The "Total Expense" is increased by the addition of an expense ..............[]
+// The "Total Expense" is increased by the addition of an expense ..............[COMPLETED]
     // NOTE: May have to create own API so balance and expense can interact with each other
 
 // *******************Update the comments when you get a chance**************************

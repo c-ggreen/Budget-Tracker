@@ -10,7 +10,7 @@ class BalanceMain extends Component {
 
     // The function responsible for altering the state of the balance.
     changeBalance = (event) =>{
-        // Note: I put a goddamn equal sign here for setState which broke my code and I couldn't figure it out for the longest time.
+        // Note: I put an equal sign here for setState which broke my code and I couldn't figure it out for the longest time.
         this.setState({
             balance: event.target.value
         })
@@ -41,7 +41,7 @@ class BalanceMain extends Component {
                 />
 
 
-                <h1>Current Balance</h1>
+                <h1>Budget</h1>
 
                 {/* The Total balance that is being called from the parent component "Main" via props */}
                 <h1 className="balanceAmount">${this.state.balance}</h1>
