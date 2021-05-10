@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import ExpenseItem from './ExpenseItem';
 
+
 class ExpenseMain extends Component {
     constructor(props){
         super(props)
         this.state={
             expenseName: '',
             expenseAmount: '',
-            expenseArray:[]
+            expenseArray:[],
+            totalExpense: 0
         }
     }
 
@@ -33,7 +35,8 @@ class ExpenseMain extends Component {
         // Creating an object that sets the expenseName and expenseAmount equal to the current values in this.state
         const expenseObject ={
             expenseName: this.state.expenseName,
-            expenseAmount: this.state.expenseAmount
+            // Makes the entered value an integer instead of a string, this is needed when accessing the totalExpense function later on so that it will treat it as a number and add up instead of a string and concatenate. Ex. "5+3" is 8, instead of "53".
+            expenseAmount: parseInt(this.state.expenseAmount)
         }
 
         // Pushing the object with the current values into the the newArray variable
@@ -41,7 +44,22 @@ class ExpenseMain extends Component {
 
         // Setting the state of the original array in this.state to the newArray that now holds the updated values
         this.setState({
-            expenseArray: newArray
+            expenseArray: newArray,
+        })
+
+        // Calling the totalExpense function inside the addExpense function so that it fires whenever the Add Button is clicked
+        this.totalExpense()
+    }
+
+    // The function responsible for adding up all the expenseAmount values
+    totalExpense = () =>{
+
+        let expenseArray = this.state.expenseArray
+        
+        let total = expenseArray.reduce((acc,cValue) => acc + cValue.expenseAmount, 0)
+
+        this.setState({
+            totalExpense: parseInt(total)
         })
     }
 
@@ -59,8 +77,8 @@ class ExpenseMain extends Component {
 
     render() {
         return (
-            <div className="expenseMain">
-                <h1>Total Expenses: <span className="totalExpense">${this.state.expenseAmount}</span></h1>
+            <div className="expenseMain" >
+                <h1>Total Expenses: <span className="totalExpense">${this.state.totalExpense}</span></h1>
 
             {/* The input field for the Expense Name */}
             <input 
@@ -86,10 +104,9 @@ class ExpenseMain extends Component {
                 onFocus={this.onFocusAmount}
             />
 
-            {/* The button that carries on the addExpense function that adds the new expense object to the array, which in turn renders it onto the DOM */}
+            {/* The button that carries out the addExpense function that adds the new expense object to the array, which in turn renders it onto the DOM */}
             <button onClick={()=>{this.addExpense()}}>Add Expense</button>
 
-                
             {/* I am rendering an "ExpenseItem" component by adding an item to an empty array. For each "ExpenseItem" I am giving it a prop of name and amount that is tied to the state */}
             {this.state.expenseArray.map((item,i)=>{
                     

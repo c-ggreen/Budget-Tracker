@@ -1,31 +1,39 @@
+body{
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
 .main{
   /* border: solid 1px black; */
+  background-color: white;
   border-radius: 1%;
   height: 90vh;
   width: 80%;
   margin: 2% auto;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   display: grid;
-  grid-template-rows: 10% 90%;
-  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 88%;
+  grid-template-columns: 25% 73%;
+  gap: 2% 2%;
   grid-template-areas:"header header"
                       "balance expense"
   ;
+  padding: 1%;
 }
 header{
   grid-area: header;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .balanceMain{
   grid-area: balance;
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
 }
   .balanceInput{
@@ -44,10 +52,11 @@ header{
   }
 .expenseMain{
   grid-area: expense;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
   .totalExpense{
     color: red;
@@ -59,3 +68,4 @@ header{
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   }
+
