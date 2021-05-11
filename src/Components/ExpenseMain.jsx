@@ -8,9 +8,9 @@ class ExpenseMain extends Component {
         super(props)
         this.state={
             expenseName: '',
-            expenseAmount: 0,
+            expenseAmount: '',
             expenseArray:[],
-            totalExpense: 0
+            totalExpense: ''
         }
     }
 

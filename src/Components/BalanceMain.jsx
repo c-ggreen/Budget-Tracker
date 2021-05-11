@@ -5,7 +5,7 @@ class BalanceMain extends Component {
     constructor(){
         super()
         this.state={
-            balance: 0,
+            balance: '',
         }
     }
 

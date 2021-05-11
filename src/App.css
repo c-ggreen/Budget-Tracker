@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
-  background: linear-gradient(to right, #8e9eab, #eef2f3);
+  /* background: linear-gradient(to right, #8e9eab, #eef2f3); */
 }
 .main{
   /* border: solid 1px black; */
-  background-color: white;
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
   border-radius: 1%;
   height: 90vh;
   width: 80%;
   margin: 1% auto;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   display: grid;
   grid-template-rows: 10% 90%;
   grid-template-areas:"header"
@@ -41,6 +41,8 @@ header{
   .balanceContent{
     grid-area: balanceContent;
     /* border: 1px solid red; */
+    border-radius: 1%;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +79,8 @@ header{
 }
 .expenseContent{
   /* border: 1px solid yellow; */
+  border-radius: 1%;
+  background-color: white;
   grid-area: content;
   display: flex;
   flex-direction: column;
