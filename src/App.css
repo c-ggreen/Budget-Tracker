@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
-  /* background: linear-gradient(to right, #8e9eab, #eef2f3); */
-}
 .main{
   /* border: solid 1px black; */
   background: linear-gradient(to right, #8e9eab, #eef2f3);

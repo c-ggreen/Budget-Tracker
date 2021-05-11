@@ -11,7 +11,6 @@ class BalanceMain extends Component {
 
     // The function responsible for altering the state of the balance.
     changeBalance = (event) =>{
-        // Note: I put an equal sign here for setState which broke my code and I couldn't figure it out for the longest time.
         this.setState({
             balance: event.target.value
         })

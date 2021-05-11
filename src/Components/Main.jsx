@@ -44,6 +44,9 @@ export default Main;
 // *******************Update the comments when you get a chance**************************
 
 // -----Stretch Goals
+// Be able to delete Expense Items from the list................................[]
 // A visual, such as a pie chart ...............................................[]
 // Local storage so users can save information and revisit at a later time .....[]
 // Ability to add several budget pages and flip through each of them ...........[]
+// Ability to rename each budget page...........................................[]
+// Warning for getting close to the budget limit................................[]
