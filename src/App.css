@@ -46,9 +46,7 @@ header{
     align-items: center;
     padding: 5%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  font-family: 'Roboto', sans-serif;
-
-
+    font-family: 'Roboto', sans-serif;
   }
   .balanceInput{
     border: none;
@@ -66,8 +64,20 @@ header{
     font-size: 2em;
   }
 .expenseMain{
+  /* border: 1px solid blue; */
   grid-area: expense;
+  display: grid;
+  grid-template-areas: 'content'
+                       'remaining'
+  ;
+  grid-template-rows: 90% 10%;
+
+  /* Fixed the problem of overflow not working in expenseContent */
+  min-height: 0;
+}
+.expenseContent{
   /* border: 1px solid yellow; */
+  grid-area: content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +103,14 @@ header{
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     font-family: 'Roboto', sans-serif;
   }
+
+.remain{
+  grid-area: remaining;
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+
+}  
   button {
   background-color: gray;
   border: none;

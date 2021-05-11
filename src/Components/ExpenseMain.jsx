@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ExpenseItem from './ExpenseItem';
+import Remaining from './Remaining';
 
 
 class ExpenseMain extends Component {
@@ -7,7 +8,7 @@ class ExpenseMain extends Component {
         super(props)
         this.state={
             expenseName: '',
-            expenseAmount: '',
+            expenseAmount: 0,
             expenseArray:[],
             totalExpense: 0
         }
@@ -77,47 +78,54 @@ class ExpenseMain extends Component {
 
     render() {
         return (
-            <div className="expenseMain" >
-                <h1>Total Expenses: <span className="totalExpense">${this.state.totalExpense}</span></h1>
+            <div className="expenseMain">
+                <div className="expenseContent">
+                    <h1>Total Expenses: <span className="totalExpense">${this.state.totalExpense}</span></h1>
 
-            {/* The input field for the Expense Name */}
-            <input 
-                className="expenseInput"
-                type="text" 
-                placeholder="Expense Name"
-                onChange={this.changeName}
-                value={this.state.expenseName}
+                    {/* The input field for the Expense Name */}
+                    <input 
+                        className="expenseInput"
+                        type="text" 
+                        placeholder="Expense Name"
+                        onChange={this.changeName}
+                        value={this.state.expenseName}
 
-                // makes it so that when user clicks on input field again it resets it to an empty input
-                onFocus={this.onFocusName}
-            />
+                        // makes it so that when user clicks on input field again it resets it to an empty input
+                        onFocus={this.onFocusName}
+                    />
 
-            {/* The input field for the Expense Amount */}
-            <input 
-                className="expenseInput"
-                type="number" 
-                placeholder="Expense Amount"
-                onChange={this.changeAmount}
-                value={this.state.expenseAmount}
+                    {/* The input field for the Expense Amount */}
+                    <input 
+                        className="expenseInput"
+                        type="number" 
+                        placeholder="Expense Amount"
+                        onChange={this.changeAmount}
+                        value={this.state.expenseAmount}
 
-                // makes it so that when user clicks on input field again it resets it to an empty input
-                onFocus={this.onFocusAmount}
-            />
+                        // makes it so that when user clicks on input field again it resets it to an empty input
+                        onFocus={this.onFocusAmount}
+                    />
 
-            {/* The button that carries out the addExpense function that adds the new expense object to the array, which in turn renders it onto the DOM */}
-            <button onClick={()=>{this.addExpense()}}>Add Expense</button>
+                    {/* The button that carries out the addExpense function that adds the new expense object to the array, which in turn renders it onto the DOM */}
+                    <button onClick={()=>{this.addExpense()}}>Add Expense</button>
 
-            <h3>History</h3>
+                    <h3>History</h3>
 
-            {/* I am rendering an "ExpenseItem" component by adding an item to an empty array. For each "ExpenseItem" I am giving it a prop of name and amount that is tied to the state */}
-            {this.state.expenseArray.map((item,i)=>{
-                    
-                return <ExpenseItem key={i}
-                expenseName={item.expenseName}
-                expenseAmount={item.expenseAmount}
-                />
+                    {/* I am rendering an "ExpenseItem" component by adding an item to an empty array. For each "ExpenseItem" I am giving it a prop of name and amount that is tied to the state */}
+                    {this.state.expenseArray.map((item,i)=>{
+                            
+                        return <ExpenseItem key={i}
+                        expenseName={item.expenseName}
+                        expenseAmount={item.expenseAmount}
+                        />
 
-            })}
+                    })}
+                </div>
+
+                    <Remaining 
+                        balance={this.props.balance}
+                        expense ={this.state.totalExpense}
+                    />
             </div>
         );
     }

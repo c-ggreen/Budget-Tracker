@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BalanceMain from './BalanceMain';
-import ExpenseMain from './ExpenseMain';
+
 
 class Main extends Component {
     constructor(){
@@ -37,7 +37,7 @@ export default Main;
 // An expense component that shows "Total Expenses" and each expense ...........[COMPLETED]
 // Inputs for "Expense Name" and "Expense Amount" ..............................[COMPLETED]
 // Add button for expenses .....................................................[COMPLETED]
-// The "Total Balance" is affected/reduced by the addition of an expense .......[]
+// The "Total Balance" is affected/reduced by the addition of an expense .......[COMPLETED]
 // The "Total Expense" is increased by the addition of an expense ..............[COMPLETED]
     // NOTE: May have to create own API so balance and expense can interact with each other
 

@@ -5,7 +5,7 @@ class BalanceMain extends Component {
     constructor(){
         super()
         this.state={
-            balance: '',
+            balance: 0,
         }
     }
 
@@ -48,7 +48,9 @@ class BalanceMain extends Component {
                     <h1 className="balanceAmount">${this.state.balance}</h1>
                 </div>
 
-                <ExpenseMain/>
+                <ExpenseMain 
+                    balance={this.state.balance}
+                />
             </div>
         );
     }
