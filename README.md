@@ -24,4 +24,4 @@ A few things I need to address are:
 - There aren't any interesting visuals such as charts or graphs
 
 ## Closing Remarks
-This project is a great practical tool for everyday use. With more development and additions I believe it has the potential to be a staple for users who are interested in personal finance and productivity. If you'd like to see my progress, or try out the application for yourself, feel free to visit my [GitHub Pages](https://c-ggreen.github.io/Budget-Tracker/)
+This project is a great practical tool for everyday use. With more development and additions I believe it has the potential to be a staple for users who are interested in personal finance and productivity. If you'd like to see my progress, or try out the application for yourself, feel free to visit my [Heroku](https://budget-app-cg.herokuapp.com/)
